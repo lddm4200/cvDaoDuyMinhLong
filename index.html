@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đào Duy Minh Long - Mobile Developer</title>
+    <meta name="description"
+        content="CV của Đào Duy Minh Long - Mobile Developer chuyên React Native, Java, JavaScript, Kotlin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <span class="brand-text">ML</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="nav-link active" data-i18n="nav_home">Trang chủ</a></li>
+            <li><a href="#about" class="nav-link" data-i18n="nav_about">Giới thiệu</a></li>
+            <li><a href="#goals" class="nav-link" data-i18n="nav_goals">Mục tiêu</a></li>
+            <li><a href="#experience" class="nav-link" data-i18n="nav_experience">Kinh nghiệm</a></li>
+            <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Kỹ năng</a></li>
+            <li><a href="#education" class="nav-link" data-i18n="nav_education">Học vấn</a></li>
+            <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Liên hệ</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="lang-toggle" id="langToggle" aria-label="Switch language">
+                <div class="lang-slider"></div>
+                <span class="lang-option active" data-lang="vi">VI</span>
+                <span class="lang-option" data-lang="en">EN</span>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-links">
+            <li><a href="#hero" class="mobile-link" data-i18n="nav_home">Trang chủ</a></li>
+            <li><a href="#about" class="mobile-link" data-i18n="nav_about">Giới thiệu</a></li>
+            <li><a href="#goals" class="mobile-link" data-i18n="nav_goals">Mục tiêu</a></li>
+            <li><a href="#experience" class="mobile-link" data-i18n="nav_experience">Kinh nghiệm</a></li>
+            <li><a href="#skills" class="mobile-link" data-i18n="nav_skills">Kỹ năng</a></li>
+            <li><a href="#education" class="mobile-link" data-i18n="nav_education">Học vấn</a></li>
+            <li><a href="#contact" class="mobile-link" data-i18n="nav_contact">Liên hệ</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting animate-item" data-i18n="hero_greeting">Xin chào, tôi là</p>
+                <h1 class="hero-name animate-item">
+                    <span class="name-line">Đào Duy</span>
+                    <span class="name-line gradient-text">Minh Long</span>
+                </h1>
+                <div class="hero-title-wrapper animate-item">
+                    <span class="hero-title">Mobile Developer</span>
+                    <span class="typing-cursor"></span>
+                </div>
+                <p class="hero-description animate-item" data-i18n="hero_description">
+                    Đam mê phát triển ứng dụng di động với React Native, Java & Kotlin.
+                    Luôn tìm kiếm cơ hội học hỏi và phát triển trong lĩnh vực công nghệ.
+                </p>
+                <div class="hero-cta animate-item">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> <span data-i18n="hero_cta_contact">Liên hệ ngay</span>
+                    </a>
+                    <a href="#experience" class="btn btn-secondary">
+                        <i class="fas fa-briefcase"></i> <span data-i18n="hero_cta_projects">Xem dự án</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual animate-item">
+                <div class="hero-avatar">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-ring ring-2"></div>
+                    <div class="avatar-inner">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="floating-icon icon-1"><i class="fab fa-react"></i></div>
+                    <div class="floating-icon icon-2"><i class="fab fa-java"></i></div>
+                    <div class="floating-icon icon-3"><i class="fab fa-js-square"></i></div>
+                    <div class="floating-icon icon-4"><i class="fab fa-node-js"></i></div>
+                    <div class="floating-icon icon-5"><i class="fab fa-git-alt"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p data-i18n="scroll_down">Cuộn xuống</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title animate-item">
+                <span class="title-number">01.</span> <span data-i18n="section_about">Giới thiệu</span>
+            </h2>
+            <div class="about-grid">
+                <div class="about-info animate-item">
+                    <div class="info-card glass-card">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-user"></i></div>
+                            <div class="info-text">
+                                <span class="info-label" data-i18n="label_fullname">Họ và tên</span>
+                                <span class="info-value">Đào Duy Minh Long</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-birthday-cake"></i></div>
+                            <div class="info-text">
+                                <span class="info-label" data-i18n="label_dob">Ngày sinh</span>
+                                <span class="info-value">24/12/2004</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-venus-mars"></i></div>
+                            <div class="info-text">
+                                <span class="info-label" data-i18n="label_gender">Giới tính</span>
+                                <span class="info-value" data-i18n="value_gender">Nam</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-text">
+                                <span class="info-label" data-i18n="label_address">Địa chỉ</span>
+                                <span class="info-value">Bình Lục, Hà Nam</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <div class="info-text">
+                                <span class="info-label" data-i18n="label_phone">Điện thoại</span>
+                                <span class="info-value">0975 241 204</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="info-text">
+                                <span class="info-label" data-i18n="label_email">Email</span>
+                                <span class="info-value">longddm2k4@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-description animate-item">
+                    <div class="glass-card description-card">
+                        <p data-i18n-html="about_description">
+                            Tôi là sinh viên chuyên ngành <strong>Lập trình ứng dụng di động</strong>,
+                            đam mê xây dựng các ứng dụng mobile đẹp mắt và hiệu quả.
+                            Với kinh nghiệm làm việc cùng <strong>React Native</strong>, <strong>Java</strong>,
+                            và <strong>Kotlin</strong>, tôi luôn nỗ lực mang đến trải nghiệm tốt nhất cho người dùng.
+                        </p>
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="2">0</span>
+                                <span class="stat-label" data-i18n="stat_projects">Dự án thực tế</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="7.9" data-decimal="true">0</span>
+                                <span class="stat-label">GPA / 10</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="3">0</span>
+                                <span class="stat-label" data-i18n="stat_semesters">Học kỳ xuất sắc</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Goals Section -->
+    <section class="section section-alt" id="goals">
+        <div class="container">
+            <h2 class="section-title animate-item">
+                <span class="title-number">02.</span> <span data-i18n="section_goals">Mục tiêu nghề nghiệp</span>
+            </h2>
+            <div class="goals-grid">
+                <div class="goal-card glass-card animate-item">
+                    <div class="goal-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 data-i18n="goal_short_title">Mục tiêu ngắn hạn</h3>
+                    <span class="goal-period" data-i18n="goal_short_period">2 tháng - 1 năm</span>
+                    <ul class="goal-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-i18n="goal_short_1">Hoàn thành kỳ thực tập tại công ty và tham gia dự án thực
+                                tế</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-i18n="goal_short_2">Trở thành nhân viên chính thức của công ty</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="goal-card glass-card animate-item">
+                    <div class="goal-icon long-term">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3 data-i18n="goal_long_title">Mục tiêu dài hạn</h3>
+                    <span class="goal-period" data-i18n="goal_long_period">> 1 năm</span>
+                    <ul class="goal-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-i18n="goal_long_1">Có khả năng giao tiếp tiếng Anh sau 1 năm</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-i18n="goal_long_2">Tham gia các dự án lớn để nâng cao kỹ năng</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title animate-item">
+                <span class="title-number">03.</span> <span data-i18n="section_experience">Kinh nghiệm làm việc</span>
+            </h2>
+            <div class="timeline">
+                <!-- Project 1 -->
+                <div class="timeline-item animate-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">11/2025</div>
+                    <div class="timeline-card glass-card">
+                        <div class="project-header">
+                            <h3 class="project-name">One Pickleball</h3>
+                            <span class="project-badge">Front-end Dev</span>
+                        </div>
+                        <div class="project-meta">
+                            <span><i class="fas fa-users"></i> <span data-i18n="members_3">3 thành viên</span></span>
+                            <span><i class="fas fa-chart-line"></i> <span data-i18n="result_80">Kết quả:
+                                    80%</span></span>
+                        </div>
+                        <p class="project-description" data-i18n="project1_desc">
+                            One Pickleball là nền tảng mobile toàn diện kết nối cộng đồng Pickleball
+                            đang phát triển — giúp dễ dàng tìm sân gần nhất, đặt lịch, tham gia giải đấu,
+                            và theo dõi thống kê cá nhân. Xây dựng trên sự đơn giản, tin cậy và đổi mới.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Visual Studio</span>
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Expo</span>
+                            <span class="tech-tag">ESA Build</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="timeline-item animate-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">10/2024 - 12/2024</div>
+                    <div class="timeline-card glass-card">
+                        <div class="project-header">
+                            <h3 class="project-name">Hero Petshop</h3>
+                            <span class="project-badge member-badge">Member</span>
+                        </div>
+                        <div class="project-subtitle">Pet Care Appointment Booking App</div>
+                        <div class="project-meta">
+                            <span><i class="fas fa-users"></i> <span data-i18n="members_6">6 thành viên</span></span>
+                            <span><i class="fas fa-chart-line"></i> <span data-i18n="result_8_10">Kết quả:
+                                    8/10</span></span>
+                        </div>
+                        <p class="project-description" data-i18n="project2_desc">
+                            Thiết kế web cho hệ thống quản trị và ứng dụng đặt lịch Hero Petshop,
+                            cho phép người dùng nhanh chóng đặt lịch chăm sóc thú cưng và thanh toán
+                            qua Momo. Web quản trị giúp người quản lý xử lý đơn hàng và theo dõi
+                            trạng thái đơn hàng chính xác.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">NodeJs</span>
+                            <span class="tech-tag">Android Studio</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title animate-item">
+                <span class="title-number">04.</span> <span data-i18n="section_skills">Kỹ năng</span>
+            </h2>
+            <div class="skills-wrapper">
+                <!-- Technical Skills -->
+                <div class="skills-category animate-item">
+                    <h3 class="skills-cat-title"><i class="fas fa-code"></i> <span data-i18n="skills_technical">Chuyên
+                            môn kỹ thuật</span></h3>
+                    <div class="skills-grid">
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon"><i class="fab fa-java"></i></div>
+                            <h4>Java</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                            <h4>JavaScript</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon"><i class="fab fa-android"></i></div>
+                            <h4>Kotlin</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <h4>React / React Native</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                            <h4>NodeJs</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <h4>SQL Server / MongoDB</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-width="65"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="tools-section animate-item">
+                    <h3 class="skills-cat-title"><i class="fas fa-tools"></i> <span data-i18n="skills_tools">Công
+                            cụ</span></h3>
+                    <div class="tools-grid">
+                        <div class="tool-item glass-card">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tool-item glass-card">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="tool-item glass-card">
+                            <i class="fab fa-trello"></i>
+                            <span>Trello</span>
+                        </div>
+                        <div class="tool-item glass-card">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="tool-item glass-card">
+                            <i class="fab fa-android"></i>
+                            <span>Android Studio</span>
+                        </div>
+                        <div class="tool-item glass-card">
+                            <i class="fas fa-fire"></i>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="soft-skills-section animate-item">
+                    <h3 class="skills-cat-title"><i class="fas fa-brain"></i> <span data-i18n="skills_soft">Kỹ năng
+                            mềm</span></h3>
+                    <div class="soft-skills-grid">
+                        <div class="soft-skill-card glass-card">
+                            <div class="soft-icon"><i class="fas fa-book-reader"></i></div>
+                            <p data-i18n="soft_english">Đọc hiểu tài liệu tiếng Anh cơ bản</p>
+                        </div>
+                        <div class="soft-skill-card glass-card">
+                            <div class="soft-icon"><i class="fas fa-fire-alt"></i></div>
+                            <p data-i18n="soft_eager">Ham học hỏi và chăm chỉ</p>
+                        </div>
+                        <div class="soft-skill-card glass-card">
+                            <div class="soft-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <p data-i18n="soft_presenting">Thuyết trình trước đám đông</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title animate-item">
+                <span class="title-number">05.</span> <span data-i18n="section_education">Học vấn & Hoạt động</span>
+            </h2>
+            <div class="education-grid">
+                <div class="edu-card glass-card animate-item">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 data-i18n="edu_major">Chuyên ngành Lập trình di động</h3>
+                    <span class="edu-period">09/2022 - 02/2025</span>
+                    <ul class="edu-details">
+                        <li><i class="fas fa-star"></i> <span data-i18n-html="edu_gpa">GPA:
+                                <strong>7.9/10</strong></span></li>
+                        <li><i class="fas fa-award"></i> <span data-i18n-html="edu_excellent">Sinh viên xuất sắc:
+                                <strong>3/7 học kỳ</strong></span></li>
+                        <li><i class="fas fa-medal"></i> <span data-i18n-html="edu_honors">Tốt nghiệp loại
+                                <strong>Giỏi</strong></span></li>
+                    </ul>
+                </div>
+                <div class="activity-card glass-card animate-item">
+                    <div class="edu-icon activity-icon"><i class="fas fa-running"></i></div>
+                    <h3 data-i18n="activities_title">Hoạt động ngoại khóa</h3>
+                    <ul class="activity-list">
+                        <li>
+                            <i class="fas fa-trophy"></i>
+                            <span data-i18n="activity_1">Tham gia hoạt động của trường: vRace, từ thiện, team
+                                building</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-certificate"></i>
+                            <span data-i18n="activity_2">Tham gia và nhận chứng chỉ chương trình thực tập ứng dụng di
+                                động của trường</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <h2 class="section-title animate-item">
+                <span class="title-number">06.</span> <span data-i18n="section_contact">Liên hệ</span>
+            </h2>
+            <div class="contact-content animate-item">
+                <p class="contact-intro" data-i18n="contact_intro">
+                    Bạn muốn liên hệ với tôi? Hãy gửi tin nhắn hoặc liên hệ qua các kênh bên dưới!
+                </p>
+                <div class="contact-cards">
+                    <a href="mailto:longddm2k4@gmail.com" class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <h4>Email</h4>
+                        <p>longddm2k4@gmail.com</p>
+                    </a>
+                    <a href="tel:0975241204" class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <h4 data-i18n="contact_phone">Điện thoại</h4>
+                        <p>0975 241 204</p>
+                    </a>
+                    <a href="https://github.com/lddm4200" target="_blank" class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fab fa-github"></i></div>
+                        <h4>GitHub</h4>
+                        <p>github.com/lddm4200</p>
+                    </a>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4 data-i18n="contact_address">Địa chỉ</h4>
+                        <p>Bình Lục, Hà Nam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-text">ML</span>
+                    <p>Đào Duy Minh Long</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/lddm4200" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:longddm2k4@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:0975241204"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Đào Duy Minh Long.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
