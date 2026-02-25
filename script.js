@@ -359,7 +359,8 @@ const experienceData = [
             vi: "One Pickleball là nền tảng mobile toàn diện kết nối cộng đồng Pickleball đang phát triển — giúp dễ dàng tìm sân gần nhất, đặt lịch, tham gia giải đấu, và theo dõi thống kê cá nhân. Xây dựng trên sự đơn giản, tin cậy và đổi mới.",
             en: "One Pickleball is a comprehensive mobile platform connecting the growing Pickleball community — making it easy to find nearby courts, book sessions, join tournaments, and track personal stats. Built on simplicity, reliability, and innovation."
         },
-        techStack: ["React Native", "Visual Studio", "Figma", "Expo", "ESA Build"]
+        techStack: ["React Native", "Visual Studio", "Figma", "Expo", "ESA Build"],
+        link: { url: "https://drive.google.com/file/d/1vfE4KmnQ9TvQ_CaPN8SACEf4R5Kjjv6C/view?usp=drive_link", label: { vi: "Xem dự án", en: "View Project" } }
     },
     {
         name: "Hero Petshop",
@@ -373,7 +374,8 @@ const experienceData = [
             vi: "Thiết kế web cho hệ thống quản trị và ứng dụng đặt lịch Hero Petshop, cho phép người dùng nhanh chóng đặt lịch chăm sóc thú cưng và thanh toán qua Momo. Web quản trị giúp người quản lý xử lý đơn hàng và theo dõi trạng thái đơn hàng chính xác.",
             en: "Designed admin dashboard and pet care appointment booking app Hero Petshop, allowing users to quickly schedule pet care services and make payments via Momo. The admin panel helps managers process orders and track order statuses accurately."
         },
-        techStack: ["Java", "JavaScript", "NodeJs", "Android Studio", "Firebase"]
+        techStack: ["Java", "JavaScript", "NodeJs", "Android Studio", "Firebase"],
+        link: { url: "", label: { vi: "Xem dự án", en: "View Project" } }
     }
 ];
 
@@ -633,6 +635,10 @@ class LanguageSwitcher {
                 `<span class="tech-tag">${t}</span>`
             ).join('');
 
+            const linkHtml = project.link && project.link.url
+                ? `<a href="${project.link.url}" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> ${project.link.label[lang]}</a>`
+                : '';
+
             html += `
                 <div class="timeline-item animate-item">
                     <div class="timeline-dot"></div>
@@ -648,7 +654,10 @@ class LanguageSwitcher {
                             <span><i class="fas fa-chart-line"></i> ${project.result[lang]}</span>
                         </div>
                         <p class="project-description">${project.description[lang]}</p>
-                        <div class="tech-stack">${techHtml}</div>
+                        <div class="project-footer">
+                            <div class="tech-stack">${techHtml}</div>
+                            ${linkHtml}
+                        </div>
                     </div>
                 </div>
             `;
