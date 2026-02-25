@@ -243,66 +243,8 @@
             <h2 class="section-title animate-item">
                 <span class="title-number">03.</span> <span data-i18n="section_experience">Kinh nghiệm làm việc</span>
             </h2>
-            <div class="timeline">
-                <!-- Project 1 -->
-                <div class="timeline-item animate-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">11/2025</div>
-                    <div class="timeline-card glass-card">
-                        <div class="project-header">
-                            <h3 class="project-name">One Pickleball</h3>
-                            <span class="project-badge">Front-end Dev</span>
-                        </div>
-                        <div class="project-meta">
-                            <span><i class="fas fa-users"></i> <span data-i18n="members_3">3 thành viên</span></span>
-                            <span><i class="fas fa-chart-line"></i> <span data-i18n="result_80">Kết quả:
-                                    80%</span></span>
-                        </div>
-                        <p class="project-description" data-i18n="project1_desc">
-                            One Pickleball là nền tảng mobile toàn diện kết nối cộng đồng Pickleball
-                            đang phát triển — giúp dễ dàng tìm sân gần nhất, đặt lịch, tham gia giải đấu,
-                            và theo dõi thống kê cá nhân. Xây dựng trên sự đơn giản, tin cậy và đổi mới.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Visual Studio</span>
-                            <span class="tech-tag">Figma</span>
-                            <span class="tech-tag">Expo</span>
-                            <span class="tech-tag">ESA Build</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="timeline-item animate-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">10/2024 - 12/2024</div>
-                    <div class="timeline-card glass-card">
-                        <div class="project-header">
-                            <h3 class="project-name">Hero Petshop</h3>
-                            <span class="project-badge member-badge">Member</span>
-                        </div>
-                        <div class="project-subtitle">Pet Care Appointment Booking App</div>
-                        <div class="project-meta">
-                            <span><i class="fas fa-users"></i> <span data-i18n="members_6">6 thành viên</span></span>
-                            <span><i class="fas fa-chart-line"></i> <span data-i18n="result_8_10">Kết quả:
-                                    8/10</span></span>
-                        </div>
-                        <p class="project-description" data-i18n="project2_desc">
-                            Thiết kế web cho hệ thống quản trị và ứng dụng đặt lịch Hero Petshop,
-                            cho phép người dùng nhanh chóng đặt lịch chăm sóc thú cưng và thanh toán
-                            qua Momo. Web quản trị giúp người quản lý xử lý đơn hàng và theo dõi
-                            trạng thái đơn hàng chính xác.
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">NodeJs</span>
-                            <span class="tech-tag">Android Studio</span>
-                            <span class="tech-tag">Firebase</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="timeline" id="experience-timeline">
+                <!-- Rendered dynamically by JS from experienceData -->
             </div>
         </div>
     </section>
@@ -425,36 +367,8 @@
             <h2 class="section-title animate-item">
                 <span class="title-number">05.</span> <span data-i18n="section_education">Học vấn & Hoạt động</span>
             </h2>
-            <div class="education-grid">
-                <div class="edu-card glass-card animate-item">
-                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3 data-i18n="edu_major">Chuyên ngành Lập trình di động</h3>
-                    <span class="edu-period">09/2022 - 02/2025</span>
-                    <ul class="edu-details">
-                        <li><i class="fas fa-star"></i> <span data-i18n-html="edu_gpa">GPA:
-                                <strong>7.9/10</strong></span></li>
-                        <li><i class="fas fa-award"></i> <span data-i18n-html="edu_excellent">Sinh viên xuất sắc:
-                                <strong>3/7 học kỳ</strong></span></li>
-                        <li><i class="fas fa-medal"></i> <span data-i18n-html="edu_honors">Tốt nghiệp loại
-                                <strong>Giỏi</strong></span></li>
-                    </ul>
-                </div>
-                <div class="activity-card glass-card animate-item">
-                    <div class="edu-icon activity-icon"><i class="fas fa-running"></i></div>
-                    <h3 data-i18n="activities_title">Hoạt động ngoại khóa</h3>
-                    <ul class="activity-list">
-                        <li>
-                            <i class="fas fa-trophy"></i>
-                            <span data-i18n="activity_1">Tham gia hoạt động của trường: vRace, từ thiện, team
-                                building</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-certificate"></i>
-                            <span data-i18n="activity_2">Tham gia và nhận chứng chỉ chương trình thực tập ứng dụng di
-                                động của trường</span>
-                        </li>
-                    </ul>
-                </div>
+            <div class="education-grid" id="education-grid">
+                <!-- Rendered dynamically by JS from educationData -->
             </div>
         </div>
     </section>

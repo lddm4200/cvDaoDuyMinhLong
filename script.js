@@ -344,6 +344,68 @@ class TiltEffect {
 }
 
 /* ============================
+   Experience / Projects Data
+   ============================ */
+const experienceData = [
+    {
+        name: "One Pickleball",
+        badge: "Front-end Dev",
+        badgeClass: "",
+        date: "11/2025",
+        subtitle: "",
+        members: { vi: "3 thành viên", en: "3 members" },
+        result: { vi: "Kết quả: 80%", en: "Result: 80%" },
+        description: {
+            vi: "One Pickleball là nền tảng mobile toàn diện kết nối cộng đồng Pickleball đang phát triển — giúp dễ dàng tìm sân gần nhất, đặt lịch, tham gia giải đấu, và theo dõi thống kê cá nhân. Xây dựng trên sự đơn giản, tin cậy và đổi mới.",
+            en: "One Pickleball is a comprehensive mobile platform connecting the growing Pickleball community — making it easy to find nearby courts, book sessions, join tournaments, and track personal stats. Built on simplicity, reliability, and innovation."
+        },
+        techStack: ["React Native", "Visual Studio", "Figma", "Expo", "ESA Build"]
+    },
+    {
+        name: "Hero Petshop",
+        badge: "Member",
+        badgeClass: "member-badge",
+        date: "10/2024 - 12/2024",
+        subtitle: "Pet Care Appointment Booking App",
+        members: { vi: "6 thành viên", en: "6 members" },
+        result: { vi: "Kết quả: 8/10", en: "Result: 8/10" },
+        description: {
+            vi: "Thiết kế web cho hệ thống quản trị và ứng dụng đặt lịch Hero Petshop, cho phép người dùng nhanh chóng đặt lịch chăm sóc thú cưng và thanh toán qua Momo. Web quản trị giúp người quản lý xử lý đơn hàng và theo dõi trạng thái đơn hàng chính xác.",
+            en: "Designed admin dashboard and pet care appointment booking app Hero Petshop, allowing users to quickly schedule pet care services and make payments via Momo. The admin panel helps managers process orders and track order statuses accurately."
+        },
+        techStack: ["Java", "JavaScript", "NodeJs", "Android Studio", "Firebase"]
+    }
+];
+
+/* ============================
+   Education & Activities Data
+   ============================ */
+const educationData = {
+    educations: [
+        {
+            icon: "fas fa-graduation-cap",
+            title: { vi: "Chuyên ngành Lập trình di động", en: "Mobile App Development Major" },
+            period: "09/2022 - 02/2025",
+            details: [
+                { icon: "fas fa-star", text: { vi: "GPA: <strong>7.9/10</strong>", en: "GPA: <strong>7.9/10</strong>" } },
+                { icon: "fas fa-award", text: { vi: "Sinh viên xuất sắc: <strong>3/7 học kỳ</strong>", en: "Excellent Student: <strong>3/7 semesters</strong>" } },
+                { icon: "fas fa-medal", text: { vi: "Tốt nghiệp loại <strong>Giỏi</strong>", en: "Graduated with <strong>Honors</strong>" } }
+            ]
+        }
+    ],
+    activities: [
+        {
+            icon: "fas fa-running",
+            title: { vi: "Hoạt động ngoại khóa", en: "Extracurricular Activities" },
+            items: [
+                { icon: "fas fa-trophy", text: { vi: "Tham gia hoạt động của trường: vRace, từ thiện, team building", en: "Participated in school activities: vRace, charity events, team building" } },
+                { icon: "fas fa-certificate", text: { vi: "Tham gia và nhận chứng chỉ chương trình thực tập ứng dụng di động của trường", en: "Participated in and received a certificate for the school's mobile app internship program" } }
+            ]
+        }
+    ]
+};
+
+/* ============================
    Language Switcher (i18n)
    ============================ */
 class LanguageSwitcher {
@@ -395,12 +457,6 @@ class LanguageSwitcher {
 
                 // Experience
                 section_experience: 'Kinh nghiệm làm việc',
-                members_3: '3 thành viên',
-                result_80: 'Kết quả: 80%',
-                project1_desc: 'One Pickleball là nền tảng mobile toàn diện kết nối cộng đồng Pickleball đang phát triển — giúp dễ dàng tìm sân gần nhất, đặt lịch, tham gia giải đấu, và theo dõi thống kê cá nhân. Xây dựng trên sự đơn giản, tin cậy và đổi mới.',
-                members_6: '6 thành viên',
-                result_8_10: 'Kết quả: 8/10',
-                project2_desc: 'Thiết kế web cho hệ thống quản trị và ứng dụng đặt lịch Hero Petshop, cho phép người dùng nhanh chóng đặt lịch chăm sóc thú cưng và thanh toán qua Momo. Web quản trị giúp người quản lý xử lý đơn hàng và theo dõi trạng thái đơn hàng chính xác.',
 
                 // Skills
                 section_skills: 'Kỹ năng',
@@ -413,10 +469,6 @@ class LanguageSwitcher {
 
                 // Education
                 section_education: 'Học vấn & Hoạt động',
-                edu_major: 'Chuyên ngành Lập trình di động',
-                activities_title: 'Hoạt động ngoại khóa',
-                activity_1: 'Tham gia hoạt động của trường: vRace, từ thiện, team building',
-                activity_2: 'Tham gia và nhận chứng chỉ chương trình thực tập ứng dụng di động của trường',
 
                 // Contact
                 section_contact: 'Liên hệ',
@@ -466,12 +518,6 @@ class LanguageSwitcher {
 
                 // Experience
                 section_experience: 'Work Experience',
-                members_3: '3 members',
-                result_80: 'Result: 80%',
-                project1_desc: 'One Pickleball is a comprehensive mobile platform connecting the growing Pickleball community — making it easy to find nearby courts, book sessions, join tournaments, and track personal stats. Built on simplicity, reliability, and innovation.',
-                members_6: '6 members',
-                result_8_10: 'Result: 8/10',
-                project2_desc: 'Designed admin dashboard and pet care appointment booking app Hero Petshop, allowing users to quickly schedule pet care services and make payments via Momo. The admin panel helps managers process orders and track order statuses accurately.',
 
                 // Skills
                 section_skills: 'Skills',
@@ -484,10 +530,6 @@ class LanguageSwitcher {
 
                 // Education
                 section_education: 'Education & Activities',
-                edu_major: 'Mobile App Development Major',
-                activities_title: 'Extracurricular Activities',
-                activity_1: 'Participated in school activities: vRace, charity events, team building',
-                activity_2: 'Participated in and received a certificate for the school\'s mobile app internship program',
 
                 // Contact
                 section_contact: 'Contact',
@@ -501,15 +543,9 @@ class LanguageSwitcher {
         this.htmlTranslations = {
             vi: {
                 about_description: 'Tôi là sinh viên chuyên ngành <strong>Lập trình ứng dụng di động</strong>, đam mê xây dựng các ứng dụng mobile đẹp mắt và hiệu quả. Với kinh nghiệm làm việc cùng <strong>React Native</strong>, <strong>Java</strong>, và <strong>Kotlin</strong>, tôi luôn nỗ lực mang đến trải nghiệm tốt nhất cho người dùng.',
-                edu_gpa: 'GPA: <strong>7.9/10</strong>',
-                edu_excellent: 'Sinh viên xuất sắc: <strong>3/7 học kỳ</strong>',
-                edu_honors: 'Tốt nghiệp loại <strong>Giỏi</strong>',
             },
             en: {
                 about_description: "I'm a student majoring in <strong>Mobile App Development</strong>, passionate about building beautiful and efficient mobile applications. With experience working with <strong>React Native</strong>, <strong>Java</strong>, and <strong>Kotlin</strong>, I strive to deliver the best user experience.",
-                edu_gpa: 'GPA: <strong>7.9/10</strong>',
-                edu_excellent: 'Excellent Student: <strong>3/7 semesters</strong>',
-                edu_honors: 'Graduated with <strong>Honors</strong>',
             }
         };
 
@@ -528,6 +564,10 @@ class LanguageSwitcher {
             });
         });
 
+        // Render dynamic sections on load
+        this.renderExperience(this.currentLang);
+        this.renderEducation(this.currentLang);
+
         // Apply saved language on load (without animation)
         if (this.currentLang !== 'vi') {
             this.applyLanguage(this.currentLang);
@@ -545,6 +585,8 @@ class LanguageSwitcher {
         // Fade text transition
         document.body.classList.add('lang-switching');
         setTimeout(() => {
+            this.renderExperience(lang);
+            this.renderEducation(lang);
             this.applyLanguage(lang);
             document.body.classList.remove('lang-switching');
         }, 200);
@@ -572,6 +614,124 @@ class LanguageSwitcher {
 
         // Update page lang attribute
         document.documentElement.lang = lang;
+    }
+
+    renderExperience(lang) {
+        const timeline = document.getElementById('experience-timeline');
+        if (!timeline) return;
+
+        let html = '';
+
+        experienceData.forEach(project => {
+            const subtitleHtml = project.subtitle
+                ? `<div class="project-subtitle">${project.subtitle}</div>`
+                : '';
+            const badgeClass = project.badgeClass
+                ? `project-badge ${project.badgeClass}`
+                : 'project-badge';
+            const techHtml = project.techStack.map(t =>
+                `<span class="tech-tag">${t}</span>`
+            ).join('');
+
+            html += `
+                <div class="timeline-item animate-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">${project.date}</div>
+                    <div class="timeline-card glass-card">
+                        <div class="project-header">
+                            <h3 class="project-name">${project.name}</h3>
+                            <span class="${badgeClass}">${project.badge}</span>
+                        </div>
+                        ${subtitleHtml}
+                        <div class="project-meta">
+                            <span><i class="fas fa-users"></i> ${project.members[lang]}</span>
+                            <span><i class="fas fa-chart-line"></i> ${project.result[lang]}</span>
+                        </div>
+                        <p class="project-description">${project.description[lang]}</p>
+                        <div class="tech-stack">${techHtml}</div>
+                    </div>
+                </div>
+            `;
+        });
+
+        timeline.innerHTML = html;
+
+        // Re-init animations on new elements
+        const newItems = timeline.querySelectorAll('.animate-item');
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+        );
+        newItems.forEach(item => observer.observe(item));
+
+        // Re-init tilt on new cards
+        const newCards = timeline.querySelectorAll('.timeline-card');
+        newCards.forEach(card => new TiltEffect().addTilt(card));
+    }
+
+    renderEducation(lang) {
+        const grid = document.getElementById('education-grid');
+        if (!grid) return;
+
+        let html = '';
+
+        // Render education cards
+        educationData.educations.forEach(edu => {
+            const detailsHtml = edu.details.map(d =>
+                `<li><i class="${d.icon}"></i> <span>${d.text[lang]}</span></li>`
+            ).join('');
+
+            html += `
+                <div class="edu-card glass-card animate-item">
+                    <div class="edu-icon"><i class="${edu.icon}"></i></div>
+                    <h3>${edu.title[lang]}</h3>
+                    <span class="edu-period">${edu.period}</span>
+                    <ul class="edu-details">${detailsHtml}</ul>
+                </div>
+            `;
+        });
+
+        // Render activity cards
+        educationData.activities.forEach(act => {
+            const itemsHtml = act.items.map(item =>
+                `<li><i class="${item.icon}"></i> <span>${item.text[lang]}</span></li>`
+            ).join('');
+
+            html += `
+                <div class="activity-card glass-card animate-item">
+                    <div class="edu-icon activity-icon"><i class="${act.icon}"></i></div>
+                    <h3>${act.title[lang]}</h3>
+                    <ul class="activity-list">${itemsHtml}</ul>
+                </div>
+            `;
+        });
+
+        grid.innerHTML = html;
+
+        // Re-init animations and tilt on new elements
+        const newItems = grid.querySelectorAll('.animate-item');
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+        );
+        newItems.forEach(item => observer.observe(item));
+
+        // Re-init tilt on new cards
+        const newCards = grid.querySelectorAll('.edu-card, .activity-card');
+        const tilt = new TiltEffect();
+        newCards.forEach(card => tilt.addTilt(card));
     }
 
     updateUI() {
