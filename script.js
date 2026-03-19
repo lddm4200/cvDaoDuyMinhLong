@@ -376,6 +376,22 @@ const experienceData = [
         },
         techStack: ["Java", "JavaScript", "NodeJs", "Android Studio", "Firebase"],
         link: { url: "", label: { vi: "Xem dự án", en: "View Project" } }
+    },
+
+    {
+        name: "Long Phim",
+        badge: "Dev",
+        badgeClass: "member-badge",
+        date: "12/2025 - 1/2026",
+        subtitle: "",
+        members: { vi: "1 thành viên", en: "1 members" },
+        result: { vi: "Kết quả: 100%", en: "Result: 100%" },
+        description: {
+            vi: "Thiết kế app xem phim, cập nhập phim nhanh, cho phép người dùng xem phim chế độ full hd.",
+            en: "Designed a movie viewing app with quick updates, allowing users to watch movies in full HD quality."
+        },
+        techStack: ["React Native", "TanStack Query", "VS Code", "EAS Build", "Expo"],
+        link: { url: "", label: { vi: "Xem dự án", en: "View Project" } }
     }
 ];
 
